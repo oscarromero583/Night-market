@@ -1,12 +1,21 @@
 
 import './App.css';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+import StorefrontIcon from '@mui/icons-material/Storefront';
+import SearchIcon from '@mui/icons-material/Search';
 
 function App() {
   return (
     <div className="App">
-      <div className="header_logo"></div>
+      <div className="header_logo">
+      <StorefrontIcon fontSize='large' className='header_logoImage'/>
+      <h2 className='header_logoTitle'>Night Market</h2>
+      </div>
 
-      <div className="header_searchbar"></div>
+      <div className="header_searchbar">
+        <input type="text" className='header_searchInput' />
+        <SearchIcon />
+      </div>
 
       <div className="header_nav">
         <div className="nav_item">
@@ -18,7 +27,7 @@ function App() {
             <span className="nav_itemLineTwo">Kiosk</span>
         </div>
         <div className="nav_item">
-            <span className="nav_itemLineOne">Basket</span>
+            <ShoppingBasketIcon />
             <span className="nav_itemLineTwo">0</span>
         </div>
       </div>
