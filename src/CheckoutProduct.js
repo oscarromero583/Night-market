@@ -1,5 +1,5 @@
 import React from "react";
-import "./CheckoutProduct.css"
+import "./CheckoutProduct.css";
 
 function CheckoutProduct() {
   return (
@@ -11,7 +11,7 @@ function CheckoutProduct() {
           className="checkoutProduct__image"
         />
 
-        <div className="product__info">
+        <div className="CheckoutProduct__info">
           <p className="checkoutProduct__title">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio
             itaque veniam quas!
@@ -21,7 +21,7 @@ function CheckoutProduct() {
             <strong>20</strong>
           </p>
           <div className="checkoutProduct__rating">⭐⭐</div>
-          <button>Romve from basket</button>
+          <button>Remove from basket</button>
         </div>
       </div>
     </div>
