@@ -10,10 +10,12 @@ function Header() {
         <div className="header">
 
             {/* Logo Section */}
-            <div className="header__logo">
-                <StorefrontIcon fontSize='large' className='header__logoImage' />
-                <h2 className='header__logoTitle'>Night Market</h2>
-            </div>
+            <Link  to="/" style={{ textDecoration: "none"}}>
+                <div className="header__logo">
+                     <StorefrontIcon fontSize='large' className='header__logoImage' />
+                     <h2 className='header__logoTitle'>Night Market</h2>
+                </div>
+            </Link>
 
             {/* Search Bar */}
             <div className="header__search">
@@ -31,7 +33,7 @@ function Header() {
                     <span className="nav__itemLineOne">Your</span>
                     <span className="nav__itemLineTwo">Kiosk</span>
                 </div>
-                
+
                 <Link  to="/checkout" style={{ textDecoration: "none"}}>
                 <div className="nav__itemBasket">
                     <ShoppingBasketIcon />
