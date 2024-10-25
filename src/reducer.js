@@ -4,6 +4,7 @@ export const initialState = {
     basket: [] // Initialize an empty basket
 };
 
+
 // Selector
 const reducer = (state, action) => {
     switch (action.type) {
