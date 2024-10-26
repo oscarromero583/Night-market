@@ -1,21 +1,28 @@
 import React from "react";
 import './Subtotal.css';
 import CurrencyInput from 'react-currency-input-field';
+import { useStateValue } from "./StateProvider";
+import { getBasketTotal } from "./reducer";
 
 function Subtotal() {
     const [value, setValue] = React.useState(0);
+    const [{basket}] = useStateValue();
+
 
     return (
+        
         <div className="subtotal">
             <p>
-                Subtotal (0 items): <strong>${value}</strong>
+                Subtotal ({basket.length} items)
             </p>
+        
             <CurrencyInput
                 decimalScale={2}
-                value={value}
+                value={getBasketTotal(basket)}
                 onValueChange={(newValue) => setValue(newValue)}
                 prefix="$"
             />
+            
             <small className="subtotal__gift">
                 <input type="checkbox" /> This contains a gift
             </small>
